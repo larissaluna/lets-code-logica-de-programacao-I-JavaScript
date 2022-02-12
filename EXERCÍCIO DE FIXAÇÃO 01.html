@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de fixação 01</title>
+</head>
+<body>
+    <script>
+
+        /* EXERCÍCIO 1 */
+
+        const nota1 = parseFloat(prompt ("Digite a 1ª nota:"));
+        const nota2 = parseFloat(prompt ("Digite a 2ª nota:"));
+        const nota3 = parseFloat(prompt ("Digite a 3ª nota:"));
+        const nota4 = parseFloat(prompt ("Digite a 4ª nota:"));
+        const media = (nota1 + nota2 + nota3+ nota4) / 4.0;
+        console.log("Sua média é", media.toFixed(2));
+
+        /* EXERCÍCIO 2 */
+
+        const raio = parseFloat(prompt ("Qual o valor do raio da circunferência?"));
+        const area_circulo = ((raio**2) * Math.PI);
+        console.log("A área do círculo é", area_circulo.toFixed(2));
+
+        /* EXERCÍCIO 3 */
+
+        const graus_fahrenheit = parseFloat(prompt ("Digite a temperatura em Fahrenheit:"));
+        const graus_celsius = 5 * ((graus_fahrenheit - 32)/9);
+        console.log("A temperatura em graus Celsius é", graus_celsius.toFixed(1));
+
+        /* EXERCÍCIO 4 */
+        const largura_sala = parseFloat(prompt ("Digite a largura da sala:"));
+        const comprimento_sala = parseFloat(prompt ("Digite o comprimento da sala:"));
+        const area_sala = largura_sala * comprimento_sala;
+        const perimetro_sala = ((largura_sala*2)+(comprimento_sala*2));
+        console.log("A área da sala é", area_sala.toFixed(2));
+        console.log("O perímetro da sala é", perimetro_sala.toFixed(2));
+
+        /* EXERCÍCIO 5 */
+        const largura_cozinha = parseFloat(prompt ("Digite a largura da cozinha:"));
+        const comprimento_cozinha = parseFloat(prompt ("Digite o comprimento da cozinha:"));
+        const quantidade_caixas = ((largura_cozinha * comprimento_cozinha)/2.5);
+        console.log("Você precisará de ", Math.ceil(quantidade_caixas), "caixas.");
+
+    </script>
+</body>
+</html>
