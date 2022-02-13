@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO DE FIXAÇÃO 02</title>
+</head>
+<body>
+    <script>
+
+        /* EXERCÍCIO 01 */
+        alert("Exercício 01");
+        console.log("Exercíco 01");
+        const num1 = parseInt(prompt ("Digite o 1º número, para cálculo da média:"));
+        const num2 = parseInt(prompt ("Digite o 2º número, para cálculo da média:"));
+        const calcula_media = (num1+num2)/2;
+        console.log("A média dos números no Exercíco 01 é", calcula_media);
+        const calcula_produto = (num1 * num2);
+        console.log("O produto dos números no Exercíco 01 é", calcula_produto);
+
+
+        /* EXERCÍCIO 02 */
+
+        alert("Exercício 02"); 
+        console.log("Exercíco 02");
+        const peso_da_prova1 = parseInt(prompt("Digite o peso da primeira prova:"));
+        const peso_da_prova2 = parseInt(prompt("Digite o peso da segunda prova:"));
+        const matricula_ex02 = parseInt(prompt("Informe a matrícula do aluno:"));
+        const nota_da_prova1 = parseFloat (prompt("Digite a nota da primeira prova:"));
+        const nota_da_prova2 =  parseFloat (prompt("Digite a nota da segunda prova:"));
+        const calcula_da_media_ponderada =  parseFloat (((nota_da_prova1*peso_da_prova1)+(nota_da_prova2*peso_da_prova2))/(nota_da_prova1+nota_da_prova2));
+        console.log("A matrícula do aluno é", matricula_ex02);
+        console.log("A média do aluno é", calcula_da_media_ponderada.toFixed(1));
+
+    
+        /* EXERCÍCIO 03 */        
+
+        alert("Exercício 03"); 
+        console.log("Exercíco 03");
+        const peso_prova1_ex03 = parseInt(prompt("Digite o peso da primeira prova:"));
+        const peso_prova2_ex03 = parseInt(prompt("Digite o peso da segunda prova:"));
+        const matricula_ex03 = parseInt(prompt("Informe a matrícula do aluno:"));
+        const nota_prova1_ex03 = parseFloat (prompt("Digite a nota da primeira prova:"));
+        const nota_prova2_ex03 =  parseFloat (prompt("Digite a nota da segunda prova:"));
+        const calcula_produto1_ex03 = (nota_prova1_ex03*peso_prova1_ex03);
+        const calcula_produto2_ex03 = (nota_prova2_ex03*peso_prova2_ex03);
+        const soma_provas_ex03 = (nota_prova1_ex03+nota_prova2_ex03);
+        const calcula_media_ponderada_ex03 =  parseFloat (((calcula_produto1_ex03)+(calcula_produto2_ex03))/(soma_provas_ex03));
+        console.log("A matrícula do aluno é", matricula_ex03);
+        console.log("A média do aluno é", calcula_media_ponderada_ex03.toFixed(1));
+
+        /* EXERCÍCIO 04 */
+
+        alert("Exercício 04"); 
+        console.log("Exercíco 04");
+        const peso_prova1 = parseInt(prompt("Digite o peso da primeira prova:"));
+        const peso_prova2 = parseInt(prompt("Digite o peso da segunda prova:"));
+        const matricula_aluno1 = parseInt(prompt("Informe a matrícula do primeiro aluno:"));
+        const nota_prova1_aluno1 = parseFloat (prompt("Digite a nota da primeira prova:"));
+        const nota_prova2_aluno1 =  parseFloat (prompt("Digite a nota da segunda prova:"));
+        const calcula_produto1_aluno1 = (nota_prova1_aluno1*peso_prova1);
+        const calcula_produto2_aluno1 = (nota_prova2_aluno1*peso_prova2);
+        const soma_provas_aluno1 = (nota_prova1_aluno1+nota_prova2_aluno1);
+        const calcula_media_ponderada_aluno1 =  parseFloat (((calcula_produto1_aluno1)+(calcula_produto2_aluno1))/(soma_provas_aluno1));
+        console.log("A matrícula do primeiro aluno é", matricula_aluno1);
+        console.log("A média do primeiro aluno é", calcula_media_ponderada_aluno1.toFixed(1));
+
+        
+        const matricula_aluno2 = parseInt(prompt("Informe a matrícula do segundo aluno:"));
+        const nota_prova1_aluno2 = parseFloat (prompt("Digite a nota da primeira prova:"));
+        const nota_prova2_aluno2 =  parseFloat (prompt("Digite a nota da segunda prova:"));
+        const calcula_produto1_aluno2 = (nota_prova1_aluno2*peso_prova1);
+        const calcula_produto2_aluno2 = (nota_prova2_aluno2*peso_prova2);
+        const soma_provas_aluno2 = (nota_prova1_aluno2 + nota_prova2_aluno2);
+        const calcula_media_ponderada_aluno2 =  parseFloat (((calcula_produto1_aluno2)+(calcula_produto2_aluno2))/(soma_provas_aluno2));
+        console.log("A matrícula do segundo aluno é", matricula_aluno2);
+        console.log("A média do segundo aluno é", calcula_media_ponderada_aluno2.toFixed(1));
+
+
+        /* EXERCÍCIO 05 */
+
+        alert("Exercício 05"); 
+        console.log("Exercíco 05");
+        const gasto_cliente = parseFloat(prompt("Qual o valor total do pedido?"));
+        const valor_pagar = parseFloat((gasto_cliente*0.1) + gasto_cliente);
+        console.log("O valor total a pagar é de R$", valor_pagar.toFixed(2),  ". Obrigada. \nE volte sempre!");
+
+
+         /* EXERCÍCIO 06 */   
+
+         alert("Exercício 06"); 
+        console.log("Exercíco 06");
+         const salario_bruto = parseFloat(prompt("Informe o valor do salário bruto:"));
+         const desconto_inss = parseFloat(salario_bruto*0.1);
+         const desconto_fgts = parseFloat(salario_bruto*0.08);
+         const desconto_plano_de_saude = 100.00;
+         const salario_liquido = (salario_bruto - desconto_fgts - desconto_inss - desconto_plano_de_saude);
+         console.log("O valor do seu salário líquido é de R$", salario_liquido.toFixed(2) );
+
+         alert("Fim da atividade");
+         
+
+
+
+    </script>
+</body>
+</html>
