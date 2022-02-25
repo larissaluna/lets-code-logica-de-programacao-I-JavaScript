@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO DE FIXAÇÃO 03</title>
+</head>
+<body>
+    <script>
+        /* Exercício 01 */
+
+        let nota1 = parseFloat (prompt ("Digite a 1ª nota"));
+        let nota2 = parseFloat (prompt ("Digite a 2ª nota"));
+        
+        function media_nota (nota1, nota2) {
+            return ((nota1 + nota2)/2).toFixed(2);
+        }
+
+        let media = media_nota(nota1, nota2);
+       
+        if (media <7) {
+            alert(`Sua média é ${media}. Você está Reprovado ='[`);
+        } else if (media < 10) {
+            alert(`Sua média é ${media}. Você está APROVADO :D`);
+        } else {
+            alert(`Sua média é ${media}. Você foi APROVADO com Distinção`);
+        }
+
+        /* Exercício 02 */
+        
+        let salario_bruto = parseFloat(prompt ("Digite o valor do salário"));
+
+        let cat1 = (salario_bruto*0.2).toFixed(2);
+        let cat2 = (salario_bruto*0.15).toFixed(2);
+        let cat3 = (salario_bruto*0.1).toFixed(2);
+        let cat4 = (salario_bruto*0.05).toFixed(2);
+        
+    
+        function novosalario (salario, cat) {
+            return (parseFloat(salario) + parseFloat(cat)).toFixed(2);
+        }        
+                    
+        if (salario_bruto <= 280) {
+            alert (`O seu salário era de R$ ${salario_bruto}.
+            Seu percentual de aumento é de 20% 
+            Você está recebendo um aumento de R$ ${cat1}.
+            E seu novo salário passa a ser de R$ ${novosalario(salario_bruto,cat1)}`);
+        } 
+         else if (salario_bruto < 700) {
+            alert (`O seu salário era de R$ ${salario_bruto}.
+            Seu percentual de aumento é de 15% 
+            Você está recebendo um aumento de R$ ${cat2}.
+            E seu novo salário passa a ser de R$ ${novosalario(salario_bruto,cat2)}`);
+         }
+         else if (salario_bruto < 1500) {
+            alert (`O seu salário era de R$ ${salario_bruto}.
+            Seu percentual de aumento é de 10% 
+            Você está recebendo um aumento de R$ ${cat3}.
+            E seu novo salário passa a ser de R$ ${novosalario(salario_bruto,cat3)}`);
+         }
+         else {
+            alert (`O seu salário era de R$ ${salario_bruto}.
+            Seu percentual de aumento é de 5% 
+            Você está recebendo um aumento de R$ ${cat4}.
+            E seu novo salário passa a ser de R$ ${novosalario(salario_bruto,cat4)}`);
+         }
+        
+
+          /* Exercício 03 */
+
+        let valor = parseFloat(prompt ("Digite o valor da hora trabalhada:"));
+        let horas = parseFloat(prompt ("Digite a quantidade de horas trabalhadas:"));
+          
+        function sal_bruto (valor, horas) {
+              return (parseFloat(valor) * parseFloat(horas)).toFixed(2);
+          } 
+
+        let salariobruto = sal_bruto(valor, horas);
+
+        let ir1 = (salariobruto*0).toFixed(2);
+        let ir2 = (salariobruto*0.05).toFixed(2);
+        let ir3 = (salariobruto*0.1).toFixed(2);
+        let ir4 = (salariobruto*0.2).toFixed(2);
+
+        function fgts_real (salario) {
+            return ((parseFloat(salario))*0.11);
+        }
+        
+        let fgts = fgts_real(salariobruto);
+
+        function sindicato_real (salario) {
+            return ((parseFloat(salario))*0.03);
+        }
+
+        let sindicato = sindicato_real(salariobruto);
+
+        let desc1 = (parseFloat(ir1) + parseFloat(sindicato)).toFixed(2);
+        let desc2 = (parseFloat(ir2) + parseFloat(sindicato)).toFixed(2);
+        let desc3 = (parseFloat(ir3) + parseFloat(sindicato)).toFixed(2);
+        let desc4 = (parseFloat(ir4) + parseFloat(sindicato)).toFixed(2)
+
+        
+        function sal_liquido (salario_bruto, descontos) {
+            return (parseFloat(salario_bruto) - parseFloat(descontos)).toFixed(2);
+        }
+  
+        
+        if (salariobruto <= 900) {
+            alert (`Salário Bruto: ${salariobruto}
+                    -IR [isento]: R$ ${ir1}
+                    -FGTS [11%]: R$ ${fgts_real(salariobruto)}
+                    -Sindicato [3%]: R$ ${sindicato}
+                    -Total de descontos: R$ ${desc1}
+                    -Salário Líquido: R$ ${sal_liquido(salariobruto,desc1)}`
+                   )
+        } else  if (salariobruto <= 1500) {
+            alert (`Salário Bruto: ${salariobruto}
+                    -IR [5%]: R$ ${ir2}
+                    -FGTS [11%]: R$ ${fgts_real(salariobruto)}
+                    -Sindicato [3%]: R$ ${sindicato}
+                    -Total de descontos: R$ ${desc2}
+                    -Salário Líquido: R$ ${sal_liquido(salariobruto,desc2)}`
+                   )
+        } else if (salariobruto <= 2500) {
+            alert (`Salário Bruto: ${salariobruto}
+                    -IR [10%]: R$ ${ir3}
+                    -FGTS [11%]: R$ ${fgts_real(salariobruto)}
+                    -Sindicato [3%]: R$ ${sindicato}
+                    -Total de descontos: R$ ${desc3}
+                    -Salário Líquido: R$ ${sal_liquido(salariobruto,desc3)}`
+                   )
+        } else {
+            alert (`Salário Bruto: ${salariobruto}
+                    -IR [20%]: R$ ${ir4}
+                    -FGTS [11%]: R$ ${fgts_real(salariobruto)}
+                    -Sindicato [3%]: R$ ${sindicato}
+                    -Total de descontos: R$ ${desc4}
+                    -Salário Líquido: R$ ${sal_liquido(salariobruto,desc4)}`
+                   )
+        }
+        
+
+    </script>
+       
+</body>
+</html>

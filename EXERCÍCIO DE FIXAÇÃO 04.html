@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO DE FIXAÇÃO 04</title>
+</head>
+<body>
+    <script>
+        /* EXERCÍCIO 01 */
+        
+        alert("Valores ímpares entre 0 e 50: ");
+        for (let i=0; i < 50; i++) {
+            if (i % 2 != 0) {
+            console.log(i);
+            alert(i);
+            }
+        }
+
+        /* EXERCÍCIO 02 */
+
+        let num = parseInt( prompt ("Digite a tabuada que você deseja:"));
+        let mult = 1;
+        alert(`Tabuada do ${num}`);
+
+        while (mult <= 10) {
+            alert (`${num} X ${mult} = ${ num * mult}`);
+            mult++;
+        }
+    
+        /* EXERCÍCIO 03 */
+
+        const arr = [ 2893, 3, 7635, 8, 0.2, 1, 71, 22, -1029, 3, 9];
+        let max = Math.max(...arr);
+        let min = Math.min(...arr);
+        alert(`O maior número da lista é ${max}`);
+        alert(`O menor número da lista é ${min}`);
+
+         
+
+    </script>
+</body>
+</html>
+
+
+
